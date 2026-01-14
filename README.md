@@ -1,4 +1,4 @@
-\# FastAPI MySQL CRUD Practice
+# FastAPI MySQL CRUD Practice
 
 
 
@@ -10,13 +10,13 @@ using FastAPI, SQLModel, MySQL, and Docker.
 
 Goals:
 
-\- Learn FastAPI fundamentals
+- Learn FastAPI fundamentals
 
-\- Practice ORM modeling
+- Practice ORM modeling
 
-\- Use Docker and docker-compose
+- Use Docker and docker-compose
 
-\- Follow real-world backend development workflow
+- Follow real-world backend development workflow
 
 
 
