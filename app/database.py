@@ -1,7 +1,8 @@
-from sqlmodel import create_engine
+from sqlmodel import SQLModel, create_engine, Session
 from sqlalchemy import text
 
 from .settings import get_settings
+from . import models
 
 settings = get_settings()
 engine = create_engine(settings.database_url, echo=True)
@@ -16,4 +17,3 @@ def create_db_and_tables() -> None:
 def get_session():
     with Session(engine) as session:
         yield session
-        

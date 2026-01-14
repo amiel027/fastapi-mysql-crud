@@ -1,5 +1,5 @@
 from typing import Optional
-from sqlmodel import import SQLModel, Field
+from sqlmodel import SQLModel, Field
 
 class ItemBase(SQLModel):
     name: str
@@ -8,7 +8,7 @@ class ItemBase(SQLModel):
 class Item(ItemBase, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)
 
-class ItemCreatea(ItemBase):
+class ItemCreate(ItemBase):
     pass
 
 class ItemUpdate(SQLModel):
