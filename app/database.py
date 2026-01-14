@@ -10,3 +10,6 @@ def test_db_connection() -> None:
     with engine.connect() as conn:
         conn.execute(text("SELECT 1"))
         
+def create_db_and_tables() -> None:
+    SQLModel.metadata.create_all(engine)
+    

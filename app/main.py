@@ -10,3 +10,7 @@ def on_startup():
 @app.get("/")    
 def root():
     return {"message": "FastAPI is running"}
+
+@app.get("/health/db")
+def health_db():
+    return {"status": "ok"}
