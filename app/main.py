@@ -1,5 +1,8 @@
-from fastapi import FastAPI
-from .database import test_db_connection
+from fastapi import FastAPI, Depends
+from sqlmodel import Session
+
+from .database import test_db_connection, create_db_and_tables, get_session
+from . import models
 
 app = FastAPI()
 

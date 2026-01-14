@@ -1,8 +1,19 @@
 from typing import Optional
 from sqlmodel import import SQLModel, Field
 
-class Item(SQLModel, table=True):
-    id: Optional[int] = Field(default=None, primary_key=True)
+class ItemBase(SQLModel):
     name: str
     price: float
-    
+
+class Item(ItemBase, table=True):
+    id: Optional[int] = Field(default=None, primary_key=True)
+
+class ItemCreatea(ItemBase):
+    pass
+
+class ItemUpdate(SQLModel):
+    name: Optional[str] = None
+    price: Optional[float] = None
+
+class ItemRead(ItemBase):
+    id: int
